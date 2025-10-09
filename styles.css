@@ -52,3 +52,27 @@ aside a:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+/* Selecciona el contenedor principal del pie de página */
+.copyright-footer {
+    /* Colores */
+    background-color: #006400; /* Verde oscuro (Dark Green) */
+    color: white;             /* Texto blanco para buen contraste */
+
+    /* Diseño y Espaciado */
+    width: 100%;              /* Ocupa todo el ancho de la página */
+    padding: 15px 0;          /* Espacio vertical (arriba y abajo) */
+    text-align: center;       /* Centra el texto */
+
+    /* Posición (Opcional, pero común en pies de página) */
+    /* position: fixed; */    /* Descomenta si quieres que se quede fijo abajo */
+    /* bottom: 0; */
+}
+
+/* Estiliza el párrafo dentro del pie de página */
+.copyright-footer p {
+    /* Tipografía */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    font-size: 0.9em;             /* Tamaño de fuente un poco más pequeño */
+    margin: 0;                    /* Elimina el margen por defecto del párrafo */
+}
