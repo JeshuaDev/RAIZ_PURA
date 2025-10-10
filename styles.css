@@ -1,78 +1,105 @@
-/* Reset básico */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+ /* Estilos generales del proyecto que tu equipo debe coordinar */
+ body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #fcfcfc;
+   color: #333;
+ }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f9f4;
-  color: #333;
-  line-height: 1.6;
-}
+ header,
+ footer {
+   background-color: #4a2c3a;
+   /* Morado/Vino oscuro para encabezado y pie de página */
+   color: white;
+   padding: 15px 20px;
+   text-align: center;
+ }
 
-/* Aside */
-aside {
-  background-color: #d8f3dc;
-  padding: 25px 10px;
-  border-top: 3px solid #95d5b2;
-}
+ .container {
+   display: flex;
+   /* Esto es CLAVE para que tu 'aside' se ponga al lado del 'main' */
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 0 20px;
+ }
 
-aside h3 {
-  color: #2d6a4f;
-  margin-bottom: 15px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
+ main {
+   flex: 3;
+   /* El contenido principal ocupa más espacio */
+   padding-right: 30px;
+ }
 
-aside ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
+ /* *************************************************************** */
+ /* TU PARTE: ESTILOS PARA EL MAIN ASIDE (BARRA LATERAL)           */
+ /* *************************************************************** */
+ #main-aside {
+   flex: 1;
+   /* El aside ocupa 1 parte de espacio (menos que el main) */
+   background-color: #f7f3f0;
+   /* Un tono crema suave */
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   height: fit-content;
+   /* Para que solo ocupe la altura necesaria */
+ }
 
-aside a {
-  background: linear-gradient(135deg, #95d5b2, #74c69d);
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  display: inline-block;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
+ #main-aside h2 {
+   color: #4a2c3a;
+   border-bottom: 2px solid #e0c3c3;
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+ }
 
-aside a:hover {
-  background: linear-gradient(135deg, #74c69d, #52b788);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
+ .aside-block {
+   margin-bottom: 20px;
+ }
 
-/* Selecciona el contenedor principal del pie de página */
-.copyright-footer {
-    /* Colores */
-    background-color: #006400; /* Verde oscuro (Dark Green) */
-    color: white;             /* Texto blanco para buen contraste */
+ .aside-block h3 {
+   color: #6d4c41;
+   margin-bottom: 10px;
+ }
 
-    /* Diseño y Espaciado */
-    width: 100%;              /* Ocupa todo el ancho de la página */
-    padding: 15px 0;          /* Espacio vertical (arriba y abajo) */
-    text-align: center;       /* Centra el texto */
+ #main-aside ul {
+   list-style: none;
+   padding: 0;
+ }
 
-    /* Posición (Opcional, pero común en pies de página) */
-    /* position: fixed; */    /* Descomenta si quieres que se quede fijo abajo */
-    /* bottom: 0; */
-}
+ #main-aside a,
+ .filter-btn {
+   display: block;
+   padding: 8px 10px;
+   margin-bottom: 5px;
+   text-decoration: none;
+   color: #2b2b2b;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+   border: none;
+   cursor: pointer;
+ }
 
-/* Estiliza el párrafo dentro del pie de página */
-.copyright-footer p {
-    /* Tipografía */
-    font-family: Arial, sans-serif; /* Fuente legible */
-    font-size: 0.9em;             /* Tamaño de fuente un poco más pequeño */
-    margin: 0;                    /* Elimina el margen por defecto del párrafo */
-}
+ #main-aside a:hover,
+ .filter-btn:hover {
+   background-color: #e0c3c3;
+   color: #4a2c3a;
+ }
+
+ .promotion {
+   background-color: #4a2c3a;
+   color: white;
+   padding: 15px;
+   border-radius: 8px;
+   text-align: center;
+ }
+
+ .btn-promo {
+   background-color: #ff99c8;
+   color: #4a2c3a;
+   padding: 10px 15px;
+   display: inline-block;
+   margin-top: 10px;
+   border-radius: 50px;
+   font-weight: bold;
+   text-transform: uppercase;
+ }
