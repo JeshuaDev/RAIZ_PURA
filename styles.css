@@ -1,105 +1,358 @@
- /* Estilos generales del proyecto que tu equipo debe coordinar */
- body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   background-color: #fcfcfc;
-   color: #333;
- }
+ /*
+Selector universal (*): aplica estilos a todos los elementos.
+'box-sizing: border-box;' facilita el cálculo de los anchos y las alturas.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
- header,
- footer {
-   background-color: #4a2c3a;
-   /* Morado/Vino oscuro para encabezado y pie de página */
-   color: white;
-   padding: 15px 20px;
-   text-align: center;
- }
 
- .container {
-   display: flex;
-   /* Esto es CLAVE para que tu 'aside' se ponga al lado del 'main' */
-   max-width: 1200px;
-   margin: 20px auto;
-   padding: 0 20px;
- }
 
- main {
-   flex: 3;
-   /* El contenido principal ocupa más espacio */
-   padding-right: 30px;
- }
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
- /* *************************************************************** */
- /* TU PARTE: ESTILOS PARA EL MAIN ASIDE (BARRA LATERAL)           */
- /* *************************************************************** */
- #main-aside {
-   flex: 1;
-   /* El aside ocupa 1 parte de espacio (menos que el main) */
-   background-color: #f7f3f0;
-   /* Un tono crema suave */
-   padding: 20px;
-   border-radius: 8px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   height: fit-content;
-   /* Para que solo ocupe la altura necesaria */
- }
 
- #main-aside h2 {
-   color: #4a2c3a;
-   border-bottom: 2px solid #e0c3c3;
-   padding-bottom: 10px;
-   margin-bottom: 15px;
- }
 
- .aside-block {
-   margin-bottom: 20px;
- }
+/* Estilos del header - Ya explicados */
+.main-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("imagenfondo1.jpg");
+  padding: 0 40px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
- .aside-block h3 {
-   color: #6d4c41;
-   margin-bottom: 10px;
- }
 
- #main-aside ul {
-   list-style: none;
-   padding: 0;
- }
 
- #main-aside a,
- .filter-btn {
-   display: block;
-   padding: 8px 10px;
-   margin-bottom: 5px;
-   text-decoration: none;
-   color: #2b2b2b;
-   border-radius: 4px;
-   transition: background-color 0.3s;
-   border: none;
-   cursor: pointer;
- }
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1549692520-acc6669e262c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.4);
+}
 
- #main-aside a:hover,
- .filter-btn:hover {
-   background-color: #e0c3c3;
-   color: #4a2c3a;
- }
 
- .promotion {
-   background-color: #4a2c3a;
-   color: white;
-   padding: 15px;
-   border-radius: 8px;
-   text-align: center;
- }
 
- .btn-promo {
-   background-color: #ff99c8;
-   color: #4a2c3a;
-   padding: 10px 15px;
-   display: inline-block;
-   margin-top: 10px;
-   border-radius: 50px;
-   font-weight: bold;
-   text-transform: uppercase;
- }
+
+
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+
+
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+.main-nav li {
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.main-nav a:hover {
+  color: #fca311;
+}
+
+
+
+
+
+
+
+
+/*
+--- NUEVOS ESTILOS PARA EL CONTENIDO ---
+*/
+
+
+
+
+
+
+
+
+/*
+Estilos para el contenedor principal. Le damos espacio en los lados y
+un margen superior.
+*/
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  /* Ancho máximo para que no se vea demasiado estirado */
+  margin: 20px auto;
+  /* Centra el contenedor en la página */
+}
+
+
+
+
+
+
+/* ===== DISEÑO DE DOS COLUMNAS ===== */
+.main-container-columns {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.content-area {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #79704b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.ficha-producto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.ficha-producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn-comprar {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #1b5e20;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* === Estilo general del aside === */
+.main-aside {
+  flex: 1;
+  background-color: #FFF8DC;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  border: 1px solid #E0D4B8;
+  min-width: 250px;
+}
+
+.main-aside h3,
+.main-aside h2 {
+  color: #4A4A4A;
+  border-bottom: 2px solid #8B4513;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.aside-block {
+  margin-bottom: 20px;
+}
+
+.main-aside ul {
+  padding: 0;
+}
+
+.main-aside li {
+  list-style: none;
+}
+
+.main-aside a,
+.filter-btn {
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #4A4A4A;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  background-color: #E8E5D7;
+}
+
+.main-aside a:hover,
+.filter-btn:hover {
+  background-color: #8B4513;
+  color: white;
+}
+
+/* === Oferta / Promoción === */
+.promotion {
+  background-color: #556B2F;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-promo {
+  background-color: #8B4513;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+.btn-promo:hover {
+  background-color: #7B3E12;
+}
+
+
+/* Estilos para Tutoriales (Video Responsivo) */
+.seccion-tutoriales {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* Sección del video */
+.video-section {
+  margin-top: 40px;
+  text-align: left;
+  /* alineación a la izquierda */
+  padding-left: 40px;
+  /* agrega un pequeño margen si quieres separarlo del borde */
+}
+
+.video-section video {
+  width: 150%;
+  max-width: 300px;
+  border-radius: 10px;
+  display: block;
+  /* asegura que se respete la alineación */
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  text-align: center;
+  color: white;
+  padding: 1em 0;
+  margin-top: 30px;
+}
+
+/* Media Queries para Responsividad Móvil */
+@media (max-width: 768px) {
+
+  /* En móvil, las columnas se apilan: la barra lateral pasa abajo */
+  .main-container-columns {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content-area {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .hero-section h2 {
+    font-size: 2em;
+  }
+
+  .mini-carrito {
+    right: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+
+}
